@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            color:red;
+            font-weight: bold;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Bood Data Form</h1>
+    <form action="#" id="bookDataForm" onsubmit="submitBookData(event)">
+        Book ID <input type="text" id="bookId" name="bookId" placeholder="Enter Book ID here"/>
+        <p id="bookIdError"></p>
+        <br/>
+        Book Name <input type="text" id="bookName" name="bookName" placeholder="Enter Book Name here"/>
+        <p id="bookNameError"></p>
+        <br/>
+        Book Subject <input type="text" id="bookSubject" name="bookSubject" placeholder="Enter Book Subject here"/>
+        <p id="bookSubjectError"></p>
+        <br/>
+        Book Author(s) <input type="text" id="bookAuthors" name="bookAuthors" placeholder="Enter Book Author Name here"/>
+        <p id="bookAuthorError"></p>
+        Add 2nd Author <input type="checkbox" id="bookAuthor2" name="bookAuthor2" onchange="checkAuthor2(event)"/>
+        <div id="author2div">
+            <!-- author2 text box to be generated dynamically -->
+        </div>
+        <br/>
+        Book Price  <input type="text" id="bookPrice" name="bookPrice" placeholder="Enter Book Price here"/>
+        <p id="bookPriceError"></p>
+        <br/>
+        Book Stock  <input type="text" id="bookStock" name="bookStock" placeholder="Enter Book Stock here"/>
+        <p id="bookStockError"></p>
+        <br/>
+        Published Data <input type="date" id="bookPublishedDate" name="bookPublishedDate"/>
+         <br/>
+        <input type="submit" value="Save"/>
+    </form>
+
+    <br/>
+    <ul id="errorSumary">
+        
+    </ul>
+
+    <div id="masterBookData">
+
+    </div>
+
+    <script src="script1.js"></script>
+</body>
+</html>

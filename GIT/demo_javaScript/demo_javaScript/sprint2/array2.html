@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <script>
+
+            f1();
+
+            function f1(){
+               // console.log('hi');
+                let names = ['Rishi','Anu','Koti','Prasanna','Anju'];
+            
+                // for of loop
+                for(name of names){
+                    console.log(name);
+                }
+
+                // adds element at last
+                names.push('Bhaskar');
+
+                console.log('-----');
+                   // for of loop
+                for(name of names){
+                    console.log(name);
+                }
+
+                names[9]='Raju';  // not recommended
+                // may create 'empty' / 'undefined' holes in array
+                console.log('-----');
+                   // for of loop
+                for(name of names){
+                    console.log(name);
+                }
+                console.log(names.length);              
+            }
+
+
+        </script>
+    </head>
+    <body>
+        Nothing here
+        Check web console
+    </body>
+</html>

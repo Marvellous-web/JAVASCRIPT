@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <script>
+
+        f1();
+
+        function f1() {
+            // console.log('hi');
+            let names = ['Rishi', 'Anu', 'Koti', 'Prasanna', 'Koti','Anju'];
+
+            // for of loop
+            for (name of names) {
+                console.log(name);
+            }    
+            console.log('------------');
+            
+            let result=names.find( e => {
+                return e=='Koti';
+            });
+
+            console.log(result);
+            console.log(names.indexOf('Prasa'));
+        }
+
+
+    </script>
+</head>
+
+<body>
+    Nothing here
+    Check web console
+</body>
+
+</html>

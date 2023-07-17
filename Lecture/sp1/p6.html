@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script>
+        test();
+
+        function test(){
+            let a=10;  
+            console.log('a value : ' + a); // 10
+            {
+               let a=20;
+               console.log('a value : ' + a);   // 20            
+               {
+                    let a=30;
+                    console.log('a value : ' + a);   // 30            
+               }
+               console.log('a value : ' + a);  // 20
+            }
+            console.log('a value : ' + a);  // 10
+        }
+        </script>
+            
+    </head>
+    <body>
+        Nothing
+    </body>
+</html>

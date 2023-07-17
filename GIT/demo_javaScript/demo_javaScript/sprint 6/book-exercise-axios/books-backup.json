@@ -1,0 +1,53 @@
+{
+  "books": [
+    {
+      "id": "B001",
+      "name": "Spirit of C",
+      "subject": "C Language",
+      "author": "M Cooper",
+      "price": 230
+    },
+    {
+      "id": "B002",
+      "name": "Servlets and JSP",
+      "subject": "JSP",
+      "author": "MC-G-Hil",
+      "price": 435
+    },
+    {
+      "id": "B003",
+      "name": "Threads in Java",
+      "subject": "Java",
+      "author": "BG Swamy",
+      "price": 341
+    },
+    {
+      "id": "B004",
+      "name": "Forms in HTML",
+      "subject": "HTML",
+      "author": "Raghava",
+      "price": 492
+    },
+    {
+      "id": "B005",
+      "name": "Tabgs in HTML",
+      "subject": "HTML",
+      "author": "Raghava3",
+      "price": 654     
+    },
+    {
+      "id": "B006",
+      "name": "OSI Layers",
+      "subject": "Networking",
+      "author": "MCG",
+      "price": 547
+    },
+    {
+      "id": "B007",
+      "name": "Spring",
+      "subject": "Enterprise Java",
+      "author": "BGS",
+      "price": 1034
+    }
+  ]
+}

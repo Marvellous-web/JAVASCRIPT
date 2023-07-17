@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <script>
+
+        f1();
+
+        function f1() {
+
+            function Mobile(brand, flash, ram, screen, stock) {
+                this.brand = brand;
+                this.flash = flash;
+                this.ram = ram;
+                this.screen = screen;
+                this.stock = stock;
+            }
+
+            // to create object with constructor
+
+            let mobile0 = new Mobile("Samsung", 128, 3, 5.5, 20);
+            let mobile1 = new Mobile("Nokia", 64, 2, 5.0, 30);
+            let mobile2 = new Mobile("Moto", 256, 4, 6.1, 15);
+            let mobile3 = new Mobile("LG", 256, 6, 6.2, 35);
+            let mobile4 = new Mobile("Oppo", 128, 6, 6.0, 18);
+            let mobile5 = new Mobile("Samsung", 128, 4, 5.8, 27);
+            let mobile6 = new Mobile("Vivo", 128, 2, 5.0, 32);
+            let mobile7 = new Mobile("RealMe", 512, 8, 5.1, 14);
+
+
+            let mobiles = [mobile0, mobile1, mobile2, mobile3, mobile4, mobile5, mobile6, mobile7];
+            console.log(mobiles);
+
+            mobiles[4].rating=4.1;
+            console.log('-----');
+            for(m of mobiles){
+                console.log(m);
+            }
+
+            console.log('Brand : ' + mobiles[0].brand); 
+            console.log('Brand : ' + mobiles[0]['brand']);
+            console.log(`Brand : ${mobiles[0].brand}`);
+            console.log(`Brand : ${mobiles[0]['brand']}`);
+
+            // comparator::compare(o1,o2): o1.field, o2.field
+
+            // sort by brand
+            mobiles.sort(  (o1,o2)=>{
+                return o1.brand.localeCompare(o2.brand);                
+            });
+            console.log('-----');
+            for(m of mobiles){
+                console.log(m);
+            }
+
+            // sort by stock
+            mobiles.sort(  (o1,o2)=>{
+                return o1.stock-o2.stock;                
+            });
+            console.log('-----');
+            for(m of mobiles){
+                console.log(m);
+            }
+
+            // sort by stock
+            mobiles.sort(  (o1,o2)=>{
+                return o2.stock-o1.stock;                
+            });
+            console.log('-----');
+            for(m of mobiles){
+                console.log(m);
+            }
+
+        }
+
+
+    </script>
+</head>
+
+<body>
+    Nothing here
+    Check web console
+</body>
+
+</html>

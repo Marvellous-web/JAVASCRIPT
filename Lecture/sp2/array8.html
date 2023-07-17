@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <script>
+
+        f1();
+
+        function f1() {
+            let nums = [8, 2, 4, 5, 9, 1];
+
+            for (num of nums) {
+                console.log(num);
+            }
+
+            console.log('----------');
+
+            let result = nums.reduce( (total, e) => {                
+                return total + e;
+            }, 0); 
+            // 0 is for initila value for total 
+
+            console.log(result);
+
+            nums.sort();
+
+            console.log('----------');
+            for (num of nums) {
+                console.log(num);
+            }
+
+
+
+        }
+
+
+    </script>
+</head>
+
+<body>
+    Nothing here
+    Check web console
+</body>
+
+</html>

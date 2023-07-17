@@ -1,0 +1,10 @@
+/* this is for body tag */
+body{
+    background-color: rgb(160, 154, 154);
+}
+
+/* this is for button element */
+button{
+    background-color: darkslategray;
+    color:chartreuse
+}

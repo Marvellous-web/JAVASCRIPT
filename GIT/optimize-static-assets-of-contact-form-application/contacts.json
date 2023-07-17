@@ -1,0 +1,76 @@
+{
+    "contacts": [
+      {
+        "firstname": "Asif",
+        "lastname": "bhai",
+        "email": "a@gmail.com",
+        "homeNo": "8887984694",
+        "workNo": "8887984697",
+        "birthdate": "2004-09-07",
+        "company": "HCL",
+        "jobTitle": "Tech",
+        "notes": "All are welcome",
+        "id": "eZf4muf"
+      },
+      {
+        "firstname": "zxasc",
+        "lastname": "cscds",
+        "email": "a@gmail.com",
+        "homeNo": "888794694",
+        "workNo": "8887984697",
+        "birthdate": "2004-09-06",
+        "company": "acds",
+        "jobTitle": "dscdsc",
+        "notes": "dscdsc",
+        "id": "qSJ6BX5"
+      },
+      {
+        "firstname": "zxasc",
+        "lastname": "cscds",
+        "email": "a@gmail.com",
+        "homeNo": "8887984694",
+        "workNo": "8887984697",
+        "birthdate": "2004-09-06",
+        "company": "acds",
+        "jobTitle": "dscdsc",
+        "notes": "dscdsc",
+        "id": "EvmFLag"
+      },
+      {
+        "firstname": "PRateek",
+        "lastname": "XYZ",
+        "email": "xyz@gmail.com",
+        "homeNo": "8887984694",
+        "workNo": "8887984697",
+        "birthdate": "2004-09-08",
+        "company": "HCL",
+        "jobTitle": "Ech",
+        "notes": "sldbsd",
+        "id": "AgjOV9k"
+      },
+      {
+        "firstname": "jhcvh",
+        "lastname": "kjbjjjlk",
+        "email": "c@gmail.com",
+        "homeNo": "+918887984694",
+        "workNo": "+918887984264",
+        "birthdate": "2004-09-08",
+        "company": "CDSV",
+        "jobTitle": "FVF",
+        "notes": "FVFDVDV",
+        "id": "dm9Lm_B"
+      },
+      {
+        "firstname": "jhcvh",
+        "lastname": "kjbjjjlk",
+        "email": "c@gmail.com",
+        "homeNo": "+918887984694",
+        "workNo": "+918887984264",
+        "birthdate": "2004-09-08",
+        "company": "CDSV",
+        "jobTitle": "FVF",
+        "notes": "FVFDVDV",
+        "id": "vKwceJw"
+      }
+    ]
+  }

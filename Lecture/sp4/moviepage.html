@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Book Movie Ticket</h1>
+    <form action="#" id="movieDataForm" onsubmit="submitMovieData(event)">
+
+        Movie Name <input type="text" id="movieName" name="movieName" placeholder="Enter Movie Name here"/>
+        <p id="movieNameError"></p>
+        <br><br>
+        Movie Type <input type="text" id="movieType" name="movieType" placeholder="Enter Movie Type here"/>
+        <p id="movieTypeError"></p>
+        <br><br>
+        Movie show Time <input type="text" id="movieShowTime" name="movieShowTime" placeholder="Enter Movie Show Time here"/>
+        <p id="movieShowTimeError"></p>
+        <br><br>
+        Movie Ticket Price <input type="text" id="movieTicketPrice" name="movieTicketPrice" placeholder="Enter Movie Ticket Price here"/>
+        <p id="movieTicketPriceError"></p>
+        <br><br>
+        Movie Date <input type="date" id="movieDate" name="movieDate" placeholder="Enter Movie Date here"/>
+        <p id="movieDateError"></p>
+        <br><br>
+        <input type="submit" value="Save"/>
+    </form>
+
+
+
+    <script src="movie.js"></script>
+</body>
+</html>

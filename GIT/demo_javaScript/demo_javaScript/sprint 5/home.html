@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="updateBook()">Update</button>
+
+    <button onclick="deleteBook()">Delete</button>
+
+    <h1>Book data form</h1>
+    
+    <form id="bookDataForm" action="#" onsubmit="submitBookData(event)">
+        Book ID <input type="text" id="id" name="id"/>
+        <br/>
+        Book Name <input type="text" id="bookname" name="bookname"/>
+        <br/>
+        Book Subject <input type="text" id="booksubject" name="booksubject"/>
+        <br/>
+        Book Author <input type="text" id="bookauthor" name="bookauthor"/>
+        <br/>
+        Book Price <input type="text" id="bookprice" name="bookprice"/>
+        <br/>
+        <input type="submit" value="Save Book"/>
+    </form>
+
+
+    <button onclick="getdata()">Get Books</button>
+
+
+    
+
+    <div id="bookdata">
+
+    </div>
+
+    <script src="script1.js"></script>
+</body>
+</html>

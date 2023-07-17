@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <script>
+
+// let mobiles= [
+//                 // 0th mobile details
+//                 // 1st mobile details
+//                 // 2nd mobile details
+
+//             ];
+        f1();
+
+        function f1() {
+             // brand, flash, ram, screen, stock
+            let mobiles = [
+                ["Samsung", 128, 3, 5.5, 20],
+                ["Nokia", 64, 2, 5.0, 30],
+                ["Moto", 256, 4, 6.1, 15],
+                ["LG", 256, 6, 6.2, 35],
+                ["Oppo", 128, 6, 6.0, 18],
+                ["Samsung", 128, 4, 5.8, 27],
+                ["Vivo", 128, 2, 5.0, 32],
+                ["RealMe", 512, 8, 5.1, 14]
+            ];
+            
+            console.log(mobiles);
+            // get list of mobiel which have ram >= 4
+            let filtered1=mobiles.filter( m=> {
+                return m[2]>=4;
+            });
+
+            console.log('-----');
+            for(m of filtered1){
+                console.log(m);
+            }
+
+            // get total stock of mobiles which have ram >=6
+            // 67
+           let result=mobiles.filter( m => {
+            return m[2]>=6;
+           })
+           .reduce( (total,e)=>{
+                return total + e[4];
+           },0);
+
+           console.log(result);
+         
+        }
+
+
+    </script>
+</head>
+
+<body>
+    Nothing here
+    Check web console
+</body>
+
+</html>

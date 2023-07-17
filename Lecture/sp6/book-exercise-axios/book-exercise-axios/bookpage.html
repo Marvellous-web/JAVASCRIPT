@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+ <body onload="getdata()"> 
+    <!-- <body> -->
+    <h1>Capture book data</h1>
+    <br> Book ID <input type="text" id="bookid" placeholder="Enter book ID" />  <small id="idmessage" ></small>
+    <br> Name <input type="text" id="bookname" placeholder="Enter book name"/> <small id="namemessage" ></small>
+    <br> Subject <input type="text" id="booksubject" placeholder="Enter book subject"/> <small id="subjectmessage" ></small>
+    <br> Author <input type="text" id="bookauthor" placeholder="Enter book author"/> <small id="authormessage" ></small>
+    <br> Price <input type="number" id="bookprice"/> <small id="pricemessage" ></small>
+    
+    <br> <button onclick="validatedata()">Submit data</button>
+    <br>
+    <ul id="summaryerrors">
+    </ul>
+    <div id="summaryerrors1"></div>
+    <br>
+    <div>
+        <ol id="bookslist">
+
+        </ol>
+    </div>
+    </body>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      console.log('hi');
+        const validatedata=()=>{
+            console.log('validate');
+            let errormessages = [];
+            // ALL DATA MUST BE ENTERED          
+            // get all fields data
+            // check whether entered data is blank or not
+            // if blank : display respective message on respective <small> element
+            let bookid = document.getElementById('bookid').value;
+            let bookname = document.getElementById('bookname').value;
+            let booksubject = document.getElementById('booksubject').value;
+            let bookauthor = document.getElementById('bookauthor').value;
+            let bookprice = document.getElementById('bookprice').value;
+
+            if(bookid==''){
+                document.getElementById('idmessage').innerHTML="Book ID must be entered";
+                errormessages.push('Book ID must be entered');
+            }
+            else{
+                document.getElementById('idmessage').innerHTML="";
+            }
+
+            if(bookname==''){ 
+                document.getElementById('namemessage').innerHTML="Book name must be entered";
+                errormessages.push('Book name must be entered');
+            }
+            else{
+                document.getElementById('namemessage').innerHTML="";
+            }
+
+            if(booksubject==''){ 
+                document.getElementById('subjectmessage').innerHTML="Book subject must be entered";
+                errormessages.push('Book subject must be entered');
+            }
+            else{
+                document.getElementById('subjectmessage').innerHTML="";
+            }
+
+            if(bookauthor=='' ){
+                document.getElementById('authormessage').innerHTML="Book author must be entered";
+                errormessages.push('Book auhtor must be entered');
+            }
+            else{
+                document.getElementById('authormessage').innerHTML="";
+            }
+
+            if(bookprice=='' ){
+                document.getElementById('pricemessage').innerHTML="Book price must be entered";
+                errormessages.push('Book price must be entered');
+            }
+            else{
+                document.getElementById('pricemessage').innerHTML="";
+            }
+
+
+            let content='';
+            for(i=0;i<errormessages.length;i++){
+                content = content + `<li>${errormessages[i]}</li>`;
+            }
+
+            errormessages.forEach(content)
+            {
+                content = content + `<li>${'content'}</li>`;
+            }
+            /*
+                <li>..0th.....</li>
+                <li>..1st....</li>  
+            */
+           document.getElementById('summaryerrors').innerHTML=content;
+
+           if(errormessages.length==0){ // IF VALIDATION SUCCESS
+               console.log('no errors');
+               savedata(bookid,bookname,booksubject,bookauthor, bookprice);
+
+           }
+       }
+       
+       savedata=(bookid, bookname, booksubject, bookauthor, bookprice)=>{
+           let bookobj = { 
+               "id" : bookid,
+               "name" : bookname,
+               "subject" : booksubject,
+               "author" : bookauthor,
+               "price" : parseInt(bookprice)
+           } 
+           axios.post('http://localhost:3000/books',bookobj)
+           .then(response=>{
+                console.log('Success')
+                getdata();
+           })
+           .catch(err=>{
+               console.log('post - error');
+           })
+       
+       }
+
+
+
+
+        getdata=()=>{
+            console.log('getdata');
+            axios.get('http://localhost:3000/books')
+            .then(response=>{
+                console.log(response);
+                let books = response.data;               
+                for(i=0;i<books.length;i++){
+                    let li = document.createElement("li");                  
+                    li.innerHTML=books[i].id + ", " + books[i].name + ", " + books[i].subject + ", " + books[i].author + ", " + books[i].price; 
+                    document.getElementById("bookslist").appendChild(li);                                    
+                }
+            })
+            .catch(err=>{
+                console.log('get - error');
+            })
+            // console.log('data');
+            // let xhr = new XMLHttpRequest(); // creates object for XMLHttpRequest
+            // xhr.open("GET","http://localhost:3000/books", true); // setting properties to created HTTP request
+            // xhr.send();
+            // xhr.onload=function(){    // completed             
+            //     let books = JSON.parse(xhr.response);               
+            //     for(i=0;i<books.length;i++){
+            //         let li = document.createElement("li");                  
+            //         li.innerHTML=books[i].id + ", " + books[i].name + ", " + books[i].subject + ", " + books[i].author + ", " + books[i].price; 
+            //         document.getElementById("bookslist").appendChild(li);                                    
+            //     }
+            // };
+     //console.log(`Loaded:${xhr.status}, ${xhr.statusText}, ${xhr.response}, ${xhr.readyState}`);           
+                //document.getElementById('data').innerHTML=xhr.response;     
+                 //console.log(`Loaded:${xhr.status}, ${xhr.statusText}, ${xhr.response}, ${xhr.readyState}`);           
+                //document.getElementById('data').innerHTML=xhr.response;     
+       }
+    </script>
+        
+
+
+</html>

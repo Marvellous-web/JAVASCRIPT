@@ -1,0 +1,106 @@
+<html>
+
+<head>
+    <script>
+         function Album(albumid, albumname){
+            this.albumid=albumid;
+            this.albumname=albumname;
+        }
+        function Song(songid, songname,albumid){
+            this.songid=songid;
+            this.songname=songname;
+            this.albumid=albumid;
+        }
+        function Singer(singerid, singername, songid){
+            this.singerid=singerid;
+            this.singername=singername;
+            this.songid=songid;
+        }
+f1();
+        function f1(){
+            let album0 = new Album('ALB0001','Classics');
+            let album1 = new Album('ALB0002','Pop');
+
+            let song0 = new Song('SONG0001','AbcdSong','ALB0001');
+            let song1 = new Song('SONG0002','BcdeSong','ALB0002');
+            let song2 = new Song('SONG0003','CdefSong','ALB0001');
+            let song3 = new Song('SONG0004','DefgSong','ALB0002');
+            let song4 = new Song('SONG0005','EfghSong','ALB0001');
+            let song5 = new Song('SONG0006','FghiSong','ALB0002');
+            let song6 = new Song('SONG0007','GhijSong','ALB0001');
+
+            let singer0 = new Singer('SINGER0001','Mahesh','SONG0001');
+            let singer1 = new Singer('SINGER0002','Usha','SONG0002');
+            let singer2 = new Singer('SINGER0003','Ravi','SONG0003');
+            let singer3 = new Singer('SINGER0004','Kumar','SONG0004');
+            let singer4 = new Singer('SINGER0005','Sailaja','SONG0005');
+            let singer5 = new Singer('SINGER0006','Kiran','SONG0006');
+            let singer6 = new Singer('SINGER0007','Sanya','SONG0007');
+
+            // masterdata has array of ALBUMs, array of SONGs, array of SINGERs
+            let masterdata = {
+                'albums':[ album0, album1 ],
+                'songs':[ song0, song1, song2, song3, song4, song5, song6 ],
+                'singers':[ singer0, singer1, singer2, singer3, singer4, singer5, singer6]  
+            }
+            console.log(masterdata);
+            console.log(transform(masterdata));
+        }
+        function transform(data){
+            return data.albums.map(album => {
+                return {
+                    'albumId':album.albumid,
+                    'albumName':album.albumname,
+                     'songs':data.songs
+                        .filter(song => album.albumid==song.albumid)
+                        .map(song=> {
+                             return {
+                                'songId':song.songid,
+                                'songName':song.songname,
+                                'singers':data.singers
+                                    .filter(singer=> song.songid==singer.songid)
+                                    .map(singer =>{
+                                        return {'singerId':singer.singerid,
+                                                'singerName':singer.singername
+                                        }
+                                })
+                            }
+                        })
+                }
+
+            })
+        }
+
+        // function transform(data){
+        //     return data.albums.map(album => {
+        //         return {
+        //             'albumId':album.albumid,
+        //             'albumName':album.albumname,
+        //             'songs':data.songs
+        //                 .filter(song => album.albumid==song.albumid)
+        //                 .map(song=> {
+        //                     return {
+        //                         'songId':song.songid,
+        //                         'songName':song.songname,
+        //                         'singers':data.singers
+        //                             .filter(singer=> song.songid==singer.songid)
+        //                             .map(singer =>{
+        //                                 return {'singerId':singer.singerid,
+        //                                         'singerName':singer.singername
+        //                                 }
+        //                         })
+        //                     }
+        //                 })
+        //         }
+
+        //     })
+        // }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

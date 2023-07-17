@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <script>
+        test();
+
+        function test(){
+           let a=5;
+
+           let i=1;  // starting value
+           while(i<=10){ // ending value
+               console.log(a + ' x ' + i + ' : ' + a*i);
+                i++; // re-assign
+           }           
+
+           console.log('##########################');
+           a=6;
+           i=1;
+           do{
+                console.log(a + ' x ' + i + ' : ' + a*i);
+                i++;
+           }while(i<=10);
+
+           console.log('##########################');
+           a=7;
+           for(i=1;i<=10;i++){
+               console.log(`${a} x ${i} : ${a*i}`);
+           }
+
+
+           let city='india';           
+           for(i in city){            
+               console.log(i); // 0 1 2 3
+           }           
+           for(i of city){
+               console.log(i); // i n d i a 
+           }
+
+        }
+        </script>
+            
+    </head>
+    <body>
+        Nothing
+    </body>
+</html>

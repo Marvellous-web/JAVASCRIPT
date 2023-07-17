@@ -1,0 +1,86 @@
+<html>
+
+<head>
+    <script>
+
+        f1();
+
+        function f1() {
+            // console.log('hi');
+            let names = ['Rishi', 'Anu', 'Koti', 'Prasanna', 'Anju'];
+
+            // for of loop
+            for (name of names) {
+                console.log(name);
+            }
+
+            // stack : psuh, pop
+
+            names.push('Bhaskar');
+            console.log('------------');
+            for (name of names) {
+                console.log(name);
+            }
+
+            console.log('Removed : ' + names.pop()); // Bhaskar will be removed
+
+            console.log('------------');
+
+            for (name of names) {
+                console.log(name);
+            }
+
+            // removes 1st element
+            console.log('removed : ' + names.shift());
+
+            console.log('------------');
+
+            for (name of names) {
+                console.log(name);
+            }
+
+            // adds element at begining
+            names.unshift('Anand');
+            console.log('------------');
+
+            for (name of names) {
+                console.log(name);
+            }
+
+            let newnames = names.concat('Lakshmi', 'Raghu');
+            console.log('------------');
+
+            for (name of newnames) {
+                console.log(name);
+            }
+
+
+            //  need to replace set of values in collecton with other set values
+            console.log(newnames.splice(2, 3, 'Anusha', 'Krishna'));
+            console.log('------------');
+
+            for (name of newnames) {
+                console.log(name);
+            }
+
+            // delete 4th element
+           // delete newnames[4];
+           
+           console.log(newnames.splice(4,1));
+            console.log('------------');
+
+            for (name of newnames) {
+                console.log(name);
+            }
+        }
+
+
+    </script>
+</head>
+
+<body>
+    Nothing here
+    Check web console
+</body>
+
+</html>

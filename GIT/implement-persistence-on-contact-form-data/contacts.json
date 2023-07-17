@@ -1,0 +1,40 @@
+{
+  "contacts": [
+    {
+      "firstname": "Asif",
+      "lastname": "bhai",
+      "email": "a@gmail.com",
+      "homeNo": "8887984694",
+      "workNo": "8887984697",
+      "birthdate": "2004-09-07",
+      "company": "HCL",
+      "jobTitle": "Tech",
+      "notes": "All are welcome",
+      "id": "eZf4muf"
+    },
+    {
+      "firstname": "zxasc",
+      "lastname": "cscds",
+      "email": "a@gmail.com",
+      "homeNo": "888794694",
+      "workNo": "8887984697",
+      "birthdate": "2004-09-06",
+      "company": "acds",
+      "jobTitle": "dscdsc",
+      "notes": "dscdsc",
+      "id": "qSJ6BX5"
+    },
+    {
+      "firstname": "zxasc",
+      "lastname": "cscds",
+      "email": "a@gmail.com",
+      "homeNo": "8887984694",
+      "workNo": "8887984697",
+      "birthdate": "2004-09-06",
+      "company": "acds",
+      "jobTitle": "dscdsc",
+      "notes": "dscdsc",
+      "id": "EvmFLag"
+    }
+  ]
+}
